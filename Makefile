@@ -11,6 +11,7 @@ lint:
 docker_build:
 	docker build -t hello-world-printer .
 USERNAME=wrx81869
+DOCKER_PASSWORD=Qwer!doc
 TAG=$(USERNAME)/hello-world-printer-k3
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password-stdin $${DOCKER_PASSWORD}; \
